@@ -51,14 +51,14 @@ Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 
 [Files]
-Source: {#Radare2Location} ; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: {#RizinLocation} ; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
 Root: HKCU; Subkey: "Environment"; ValueType: string; ValueName: "Path"; ValueData: "{reg:HKCU\Environment,Path};{app}\bin"; Check: NeedsAddPath(ExpandConstant('{app}\bin'));
-Root: HKCU; SubKey: "SOFTWARE\Classes\*\shell\rizin"; ValueType: string; ValueData: "Open in Radare2"; Flags: uninsdeletekey;
+Root: HKCU; SubKey: "SOFTWARE\Classes\*\shell\rizin"; ValueType: string; ValueData: "Open in Rizin"; Flags: uninsdeletekey;
 Root: HKCU; SubKey: "SOFTWARE\Classes\*\shell\rizin\command"; ValueType: string; ValueData: "cmd /k {app}\bin\rizin.exe %1"; Flags: uninsdeletekey;
-Root: HKCU; SubKey: "SOFTWARE\Classes\*\shell\rizind"; ValueType: string; ValueData: "Open in Radare2 debugger"; Flags: uninsdeletekey;
+Root: HKCU; SubKey: "SOFTWARE\Classes\*\shell\rizind"; ValueType: string; ValueData: "Open in Rizin debugger"; Flags: uninsdeletekey;
 Root: HKCU; SubKey: "SOFTWARE\Classes\*\shell\rizind\command"; ValueType: string; ValueData: "cmd /k {app}\bin\rizin.exe -d %1"; Flags: uninsdeletekey;
 
 [Code]
